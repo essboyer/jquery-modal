@@ -53,11 +53,11 @@
       if(this.options.doFade) {
         this.block();
         setTimeout(function() {
-          m.show();
+          m.stop(true).show();
         }, this.options.fadeDuration * this.options.fadeDelay);
       } else {
         this.block();
-        this.show();
+        this.stop(true).show();
       }
       if (this.options.escapeClose) {
         $(document).on('keydown.modal', function(event) {
